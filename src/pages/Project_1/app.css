@@ -1,0 +1,36 @@
+/* 전체 화면 캔버스 스타일 */
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e2d7d7; /* 어두운 배경 */
+  overflow: hidden;
+  cursor: crosshair; /* 마우스 커서 모양 변경 */
+}
+
+/* 파티클 기본 스타일 */
+.particle {
+  position: absolute; /* x, y 좌표로 위치를 잡기 위해 필수 */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  /* 마우스 포인터 중앙에 위치하도록 보정 */
+  transform: translate(-50%, -50%);
+  
+  /* 애니메이션 적용 */
+  animation: fade-and-shrink 2s forwards;
+}
+
+/* 사라지는 애니메이션 정의 */
+@keyframes fade-and-shrink {
+  from {
+    /* 시작: 완전 불투명, 원래 크기 */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    /* 끝: 완전 투명, 사라지는 크기 */
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
