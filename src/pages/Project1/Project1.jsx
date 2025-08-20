@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './app.css';
 
-function Project_1() {
+function Project1() {
   // 1. 파티클 목록을 저장할 state (메모리 공간)
   const [particles, setParticles] = useState([]);
 
@@ -42,4 +42,4 @@ function Project_1() {
   );
 }
 
-export default Project_1;
+export default Project1;
