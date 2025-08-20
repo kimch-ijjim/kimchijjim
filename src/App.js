@@ -1,41 +1,37 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// 컴포넌트 import
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import GlobalStyle from "./styles/GlobalStyle";
 
-// 페이지 컴포넌트 import
+// 레이아웃 및 페이지 컴포넌트 import
+import Layout from "./components/Layout"; // 1. 새로 만든 Layout 컴포넌트 가져오기
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
+import ProjectDetailPage from "./pages/Project1/Project1"; 
 import Blog from "./pages/Blog";
 import About from "./pages/About";
-// 1. Project1 -> ProjectDetailPage로 이름 변경 (더 명확한 이름)
-import ProjectDetailPage from "./pages/Project1/Project1"; 
-import NotFound from "./pages/NotFound"; // NotFound 페이지 import 추가
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <Router>
-        <Header />
+        {/* Header와 Footer를 여기서 직접 사용하지 않습니다. */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          {/* 2. 동적 라우팅으로 변경 (예: /portfolio/project-1, /portfolio/project-2 등 모두 처리) */}
-          <Route path="/portfolio/:projectId" element={<ProjectDetailPage />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/about" element={<About />} />
-          
-          {/* 3. 중복된 /about 경로 제거 */}
+          {/* 2. 헤더와 푸터가 필요한 페이지들은 Layout 라우트의 자식으로 묶기 */}
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/about" element={<About />} />
+          </Route>
 
-          {/* 4. '페이지 없음(Not Found)'을 위한 경로 추가 */}
-          {/* 위에서 일치하는 경로가 없을 경우, 가장 마지막에 있는 이 라우트가 잡힙니다. */}
+          {/* 3. 헤더와 푸터가 필요 없는 전체 화면 페이지는 독립적으로 배치 */}
+          <Route path="/portfolio/:projectId" element={<ProjectDetailPage />} />
+          
+          {/* NotFound 페이지는 필요에 따라 Layout 안이나 밖에 배치할 수 있습니다. */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
       </Router>
     </>
   );

@@ -1,7 +1,6 @@
 {
   "name": "isojieon",
   "version": "0.1.0",
-  "homepage": "https://kimch-ijjim.github.io/kimchijjim",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
