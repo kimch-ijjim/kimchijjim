@@ -1,0 +1,2 @@
+.App{background-color:#e2d7d7;cursor:crosshair;height:100vh;overflow:hidden;width:100vw}.particle{animation:fade-and-shrink 2s forwards;border-radius:50%;height:50px;position:absolute;transform:translate(-50%,-50%);width:50px}@keyframes fade-and-shrink{0%{opacity:1;transform:translate(-50%,-50%) scale(1)}to{opacity:0;transform:translate(-50%,-50%) scale(0)}}
+/*# sourceMappingURL=main.3e973f5f.css.map*/

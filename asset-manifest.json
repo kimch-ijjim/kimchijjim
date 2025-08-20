@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kimchijjim/static/css/main.3e973f5f.css",
+    "main.js": "/kimchijjim/static/js/main.23e818e4.js",
+    "static/media/autograph.svg": "/kimchijjim/static/media/autograph.a5bead7e6a9601d75770449a2d41fcf4.svg",
+    "static/media/main.svg": "/kimchijjim/static/media/main.740b33bc10a5d3f2537d6213a78eb94c.svg",
+    "index.html": "/kimchijjim/index.html",
+    "main.3e973f5f.css.map": "/kimchijjim/static/css/main.3e973f5f.css.map",
+    "main.23e818e4.js.map": "/kimchijjim/static/js/main.23e818e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e973f5f.css",
+    "static/js/main.23e818e4.js"
+  ]
+}
