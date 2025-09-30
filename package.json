@@ -8,6 +8,8 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^12.23.6",
+    "klinecharts": "^9.7.0",
+    "lightweight-charts": "^5.0.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-markdown": "^10.1.0",
@@ -22,7 +24,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "dev": "react-scripts start",
+    "dev:cf": "wrangler pages dev --proxy 3000"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "wrangler": "^4.32.0"
   }
 }
