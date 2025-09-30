@@ -6,7 +6,7 @@ export const projects = [
   },
   {
     id: "project-2",
-    title: "mechenical analysis demo",
+    title: "Techenical analysis demo",
     component: () => import("../pages/Project2/Project2"),
   },
 ];
